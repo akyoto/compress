@@ -8,9 +8,9 @@ import (
 	"github.com/akyoto/compress"
 )
 
-func TestNoop(t *testing.T) {
-	compressed := compress.NoopCompress(data)
-	decompressed := compress.NoopDecompress(compressed)
+func TestABC(t *testing.T) {
+	compressed := compress.ABCCompress(data)
+	decompressed := compress.ABCDecompress(compressed)
 	assert.DeepEqual(t, data, decompressed)
 
 	fmt.Println("Initial:", len(data), "bytes")
