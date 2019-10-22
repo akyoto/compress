@@ -7,7 +7,7 @@ import (
 	"github.com/akyoto/compress"
 )
 
-var data = []byte("Hello World")
+var data = []byte("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
 
 func TestNoop(t *testing.T) {
 	compressed := compress.NoopCompress(data)
