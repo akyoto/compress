@@ -7,8 +7,9 @@ import (
 	"github.com/akyoto/compress"
 )
 
+var data = []byte("Hello World")
+
 func TestNoop(t *testing.T) {
-	data := []byte("Hello World")
 	compressed := compress.NoopCompress(data)
 	decompressed := compress.NoopDecompress(compressed)
 	assert.DeepEqual(t, data, decompressed)
